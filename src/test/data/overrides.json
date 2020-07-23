@@ -1,0 +1,18 @@
+{
+  "wifi": {
+    "ap": {
+      "pass": ""
+    },
+    "sta": {
+      "ssid": "cookadoodadoo",
+      "pass": "try less cork"
+    },
+  },
+  "http": {
+    "enable": false,
+  },
+  "debug": {
+    "level": 1,
+    "file_level": "mgos_bar=1"
+  }
+}

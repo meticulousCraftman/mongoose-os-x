@@ -1,0 +1,25 @@
+[
+  ["debug", "o", {title: "Debug Settings"}],
+  ["debug.level", "i", 2, {
+    title: "Level",
+    type: "select",
+    values: [
+      {value: -1, title: "NONE"},
+      {value: 0, title: "ERROR"},
+      {value: 1, title: "WARN"},
+      {value: 2, title: "INFO"},
+      {value: 3, title: "DEBUG"},
+      {value: 4, title: "VERBOSE_DEBUG"}
+    ]
+  }],
+  ["debug.dest", "s", "uart1", {title: "Where to send debug"}],
+  ["debug.file_level", "s", "mg_foo.c=4", {title: "File level"}],
+  ["debug.test_d1", "d", 0.123, {title: "Test doubles 1"}],
+  ["debug.test_d2", "d", 0, {}],
+  ["debug.test_ui", "ui", 4294967295, {}],
+  ["test.bar", "o", {}],
+  ["test.bar.enable", "b", {}],
+  ["test.bar.param1", "i", 111, {}],
+  ["test.bar1", "test.bar", {}], # Object of the same type as previous.
+  ["test.bar1.param1", 222],     # Types are the same but defaults are separate.
+]

@@ -1,0 +1,17 @@
+# Partition table for MGOS.
+# See doc here: https://github.com/espressif/esp-idf/blob/master/docs/partition-tables.rst
+#
+# Note: if you change the phy_init or app partition offset,
+# be sure to change the offset in Kconfig.projbuild
+#
+# Note: NVS is required for WiFi.
+#
+# Name,   Type, SubType, Offset,             Size            Flags
+nvs,      data, nvs,     $NVS_ADDR,          $NVS_SIZE
+otadata,  data, ota,     $OTA_DATA_ADDR,     $OTA_DATA_SIZE
+app_0,    app,  ota_0,   $APP_OFFSET,        $APP_SLOT_SIZE
+fs_0,     data, spiffs,  ,                   $MGOS_ROOT_FS_SIZE
+app_1,    app,  ota_1,   ,                   $APP_SLOT_SIZE
+fs_1,     data, spiffs,  ,                   $MGOS_ROOT_FS_SIZE
+$ESP_IDF_EXTRA_PARTITION
+$ESP_IDF_EXTRA_PARTITION_2

@@ -1,0 +1,36 @@
+/*
+ * Copyright (c) 2014-2019 Cesanta Software Limited
+ * All rights reserved
+ *
+ * Licensed under the Apache License, Version 2.0 (the ""License"");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an ""AS IS"" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#pragma once
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+struct rs14100_uart_pins {
+  int tx, rx, ck, cts, rts;
+};
+
+struct mgos_uart_dev_config {
+  struct rs14100_uart_pins pins;
+};
+
+void rs14100_uart_putc(int uart_no, char c);
+
+#ifdef __cplusplus
+}
+#endif
